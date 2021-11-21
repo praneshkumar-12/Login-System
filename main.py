@@ -10,6 +10,7 @@ try:
 except ModuleImportError:
     os.system('pip install mysql.connector')
     time.sleep(10)
+    import mysql.connector
 try:
     from PyQt5 import QtGui
     from PyQt5 import QtWidgets, QtCore
@@ -17,7 +18,12 @@ try:
     from PyQt5.QtWidgets import QMessageBox
 except ModuleImportError:
     os.system('pip install PyQt5')
-    
+    time.sleep(10)
+    from PyQt5 import QtGui
+    from PyQt5 import QtWidgets, QtCore
+    from PyQt5.QtCore import Qt
+    from PyQt5.QtWidgets import QMessageBox
+
 from email.message import EmailMessage
 
 now, time, chk = 0, 0, 0
