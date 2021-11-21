@@ -11,3 +11,4 @@ The forgot password module uses the OTP authentication method to authenticate th
 So make sure that you register with a valid mail address.
 Set your email address and your email password (if 2FA is not enabled) or App Password (if 2FA is enabled) as a system variable with the names EMAIL_USER and EMAIL_PASS.
 You can either set it by yourself or the code will set it if you haven't.
+Make sure to change your password for mysql connection at line number 54.
