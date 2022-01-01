@@ -7,7 +7,7 @@ import os
 
 try:
     import mysql.connector
-except ModuleImportError:
+except ModuleNotFoundError:
     os.system('pip install mysql.connector')
     time.sleep(10)
     import mysql.connector
@@ -16,7 +16,7 @@ try:
     from PyQt5 import QtWidgets, QtCore
     from PyQt5.QtCore import Qt
     from PyQt5.QtWidgets import QMessageBox
-except ModuleImportError:
+except ModuleNotFoundError:
     os.system('pip install PyQt5')
     time.sleep(10)
     from PyQt5 import QtGui
