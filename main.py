@@ -577,7 +577,8 @@ class Ui_Register(object):
             chk = sql_insert(ip_user, __key, __fname, __lname, __mail)
             if chk:
                 self.stat_lbl.setText("Registration Success!")
-                msg.setText("Registration Successful!")
+                __msg_txt = "Registration Successful!, Your username is " + ip_user
+                msg.setText(__msg_txt)
                 msg.setIcon(QMessageBox.Information)
                 x = msg.exec_()
                 self.open_Login(addr)
